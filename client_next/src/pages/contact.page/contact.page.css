@@ -1,0 +1,287 @@
+.ContactPage {
+    position: relative;
+    background-color: black;
+    overflow-x: hidden;
+}
+.ContactPageMain {
+    display: grid;
+    grid-template-columns: minmax(min(100%, 28rem), 1fr) minmax(min(100%, 28rem), 1fr);
+    align-items: center;
+    gap: clamp(2rem, 4vw, 5rem);
+    width: min(100%, 2500px);
+    margin: 0 auto;
+    padding: clamp(2rem, 4vw, 5rem) clamp(1.25rem, 4vw, 5rem);
+    background-color: black;
+    color: white;
+    overflow: hidden;
+    min-height: calc(100svh - clamp(3.5rem, 5vw, 7rem));
+}
+
+.ContactPage input:focus {
+    outline: none;
+}
+
+.ContactPageLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: clamp(1.5rem, 3vw, 3rem);
+    min-width: 0;
+}
+
+.ContactPageMainText{
+    display: flex;
+    justify-content: center;
+}
+
+.ContactPageMainText h1{
+    font-size: clamp(4rem, 7vw, 12.5rem);
+    line-height: 0.9;
+    font-family: var(--font-bebas), sans-serif;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+.ContactPageMainText h1 span {
+    color: #FF6404;
+}
+
+.ContactPageDataContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(1.5rem, 3vw, 3rem);
+    width: 100%;
+    color: white;
+}
+
+.ContactTopSection {
+    text-align: center;
+    width: 100%;
+    min-width: 0;
+}
+
+.ContactTopSection h2 {
+    font-size: clamp(1.8rem, 2.5vw, 5rem);
+    font-family: var(--font-bebas), sans-serif;
+    color: #FF6404;
+    border-bottom: 3px solid #FF6404;
+    padding-bottom: 10px;
+    margin: 0 0 clamp(1rem, 2vw, 2rem);
+}
+
+.ContactTopItemsRow {
+    display: flex;
+    justify-content: center;
+    gap: clamp(1.25rem, 5vw, 6rem);
+    flex-wrap: wrap;
+    min-width: 0;
+}
+
+.ContactItem {
+    min-width: 0;
+}
+
+.ContactItem h3 {
+    font-size: clamp(1.2rem, 1.6vw, 3.2rem);
+    font-family: var(--font-bebas), sans-serif;
+    margin: 0 0 10px;
+}
+
+.ContactItem p {
+    font-size: clamp(1.15rem, 1.4vw, 3rem);
+    color: #ccc;
+    margin: 0;
+    font-family: var(--font-bebas), sans-serif;
+    overflow-wrap: anywhere;
+}
+
+.ContactBottomRow {
+    display: flex;
+    justify-content: center;
+    gap: clamp(1.25rem, 6vw, 7rem);
+    width: 100%;
+    flex-wrap: wrap;
+    min-width: 0;
+}
+
+.MessengerColumn, .SocialColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: min(100%, 12rem);
+    flex: 1;
+    max-width: 100%;
+}
+
+.MessengerColumn h2, .SocialColumn h2 {
+    font-size: clamp(1.5rem, 2vw, 4.4rem);
+    font-family: var(--font-bebas), sans-serif;
+    color: #FF6404;
+    border-bottom: 2px solid #FF6404;
+    padding-bottom: 8px;
+    margin: 0 0 1rem;
+}
+
+.MessengerColumn p, .SocialColumn p {
+    font-size: clamp(1.2rem, 1.7vw, 3.2rem);
+    color: #ccc;
+    margin: 5px 0;
+    font-family: var(--font-bebas), sans-serif;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.MessengerColumn a, .SocialColumn a {
+    text-decoration: none;
+}
+
+.SocialColumnRow{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: clamp(0.75rem, 2vw, 2rem);
+    text-align: center;
+    max-width: 100%;
+}
+
+.ContactPageRight{
+    font-size: clamp(1.5rem, 2vw, 3rem);
+    min-width: 0;
+    width: 100%;
+}
+
+.ContactPageForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: clamp(0.5rem, 2vw, 1.5rem);
+    width: 100%;
+    min-width: 0;
+}
+.ContactPageForm form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FF6404;
+    width: min(100%, 42rem);
+    max-width: 100%;
+    padding: clamp(1rem, 2vw, 2rem);
+    min-width: 0;
+}
+
+.ContactPageForm form div{
+    display: flex;
+    flex-direction: column;
+    margin: clamp(0.8rem, 2vw, 1.8rem) 0;
+    width: min(100%, 34rem);
+    min-width: 0;
+}
+
+.ContactPageForm form div input{
+    background: none;
+    border: 2px solid black;
+    border-radius: 5px;
+    min-height: clamp(2.2rem, 3vw, 4.4rem);
+    font-size: clamp(1.25rem, 1.8vw, 3.8rem);
+    color: white;
+    font-family: var(--font-bebas), sans-serif;
+    padding: 0 0.5rem;
+    width: 100%;
+    max-width: 100%;
+}
+
+.ContactPageForm form div input:focus{
+    border: none;
+    border-bottom: 2px solid black;
+    border-radius: 0;
+    transition: 2s;
+}
+
+.ContactPageForm form div label{
+    font-family: var(--font-bebas), sans-serif;
+    font-size: clamp(1.25rem, 1.8vw, 3.8rem);
+}
+
+.ContactPageForm form div button {
+    background-color: black;
+    font-size: clamp(1.25rem, 1.8vw, 3rem);
+    color: white;
+    width: min(100%, 16rem);
+    max-width: 100%;
+    min-height: clamp(2.2rem, 3vw, 5.5rem);
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-family: var(--font-bebas), sans-serif;
+    transition: transform 0.3s ease;
+}
+
+.Button {
+    display: flex;
+    justify-content: center;
+    flex-direction: row !important;
+}
+
+.ContactPageForm form div button:hover {
+    transform: scale(1.08);
+}
+
+.loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    z-index: 9999;
+    aspect-ratio: 1;
+    --c: linear-gradient(#FF6404 0 0);
+    --r1: radial-gradient(farthest-side at bottom,#FF6404 93%,#0000);
+    --r2: radial-gradient(farthest-side at top   ,#FF6404 93%,#0000);
+    background:
+        var(--c) ,var(--r1),var(--r2),
+        var(--c) ,var(--r1),var(--r2),
+        var(--c) ,var(--r1),var(--r2);
+    background-repeat: no-repeat;
+    animation: l2 1s infinite alternate;
+}
+@keyframes l2 {
+    0%,25% {
+        background-size: 8px 0,8px 4px,8px 4px,8px 0,8px 4px,8px 4px,8px 0,8px 4px,8px 4px;
+        background-position: 0 50%,0 calc(50% - 2px),0 calc(50% + 2px),50% 50%,50% calc(50% - 2px),50% calc(50% + 2px),100% 50%,100% calc(50% - 2px),100% calc(50% + 2px);
+    }
+    50% {
+        background-size: 8px 100%,8px 4px,8px 4px,8px 0,8px 4px,8px 4px,8px 0,8px 4px,8px 4px;
+        background-position: 0 50%,0 calc(0% - 2px),0 calc(100% + 2px),50% 50%,50% calc(50% - 2px),50% calc(50% + 2px),100% 50%,100% calc(50% - 2px),100% calc(50% + 2px);
+    }
+    75% {
+        background-size: 8px 100%,8px 4px,8px 4px,8px 100%,8px 4px,8px 4px,8px 0,8px 4px,8px 4px;
+        background-position: 0 50%,0 calc(0% - 2px),0 calc(100% + 2px),50% 50%,50% calc(0% - 2px),50% calc(100% + 2px),100% 50%,100% calc(50% - 2px),100% calc(50% + 2px);
+    }
+    95%,100% {
+        background-size: 8px 100%,8px 4px, 8px 4px,8px 100%,8px 4px,8px 4px,8px 100%,8px 4px,8px 4px;
+        background-position: 0 50%,0 calc(0% - 2px),0 calc(100% + 2px),50% 50%,50% calc(0% - 2px),50% calc(100% + 2px),100% 50%,100% calc(0% - 2px),100% calc(100% + 2px);
+    }
+}
+
+@media (max-width: 1024px) {
+    .ContactPageMain {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        align-items: stretch;
+    }
+
+    .ContactPageForm form {
+        width: min(100%, 38rem);
+    }
+}
+
+@media (max-width: 450px) {
+    .ContactPageMain {
+        padding-inline: clamp(0.85rem, 4vw, 1.25rem);
+    }
+
+    .ContactTopItemsRow {
+        gap: 1.5rem;
+    }
+}

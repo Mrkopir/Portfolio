@@ -1,0 +1,189 @@
+.Navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: clamp(1rem, 3vw, 4rem);
+  background-color: #FF6404;
+  padding: clamp(0.75rem, 1.4vw, 1.5rem) clamp(1rem, 4vw, 5rem);
+  z-index: 30;
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  overflow-x: hidden;
+}
+
+.Navigation p {
+  font-family: var(--font-bebas), sans-serif;
+  font-size: clamp(1.5rem, 2vw, 4.4rem);
+  line-height: 1;
+  margin: 0;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.Navigation p a {
+  font-family: var(--font-bebas), sans-serif;
+  font-size: clamp(1.5rem, 2vw, 4.4rem);
+  line-height: 1;
+  color: black;
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+
+.Navigation p:hover {
+  transform: scale(1.1);
+}
+
+.Right-Side {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: clamp(1.25rem, 4vw, 9rem);
+  min-width: 0;
+}
+
+.nav-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 30px;
+  height: 24px;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-icon div {
+  background-color: black;
+  height: 3px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  transition: 0.3s;
+}
+
+.line1 { top: 0; }
+.line2 { top: 10px; }
+.line3 { top: 20px; }
+
+.nav-icon.open .line1 {
+  transform: rotate(-45deg);
+  top: 11px;
+}
+
+.nav-icon.open .line2 {
+  opacity: 0;
+}
+
+.nav-icon.open .line3 {
+  transform: rotate(45deg);
+  top: 11px;
+}
+
+@media (min-width: 768px) {
+  .HiddenBurger {
+    display: none;
+  }
+
+  .PhoneMenu,
+  .Overlay {
+    display: none !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .Navigation {
+    padding-inline: clamp(0.85rem, 5vw, 1.5rem);
+  }
+
+  .HiddenBurger,
+  .Overlay {
+    display: block !important;
+  }
+
+  .Right-Side {
+    gap: 0;
+  }
+
+  .Right-Side p {
+    display: none;
+  }
+
+  .PhoneMenu {
+    display: none;
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    max-width: 100%;
+    min-height: 100svh;
+    background-color: #FF6404;
+    z-index: 40;
+    padding: clamp(5rem, 16vw, 7rem) 1rem 2rem;
+    overflow-x: hidden;
+  }
+
+  .PhoneMenu.menu-items.active {
+    display: block;
+  }
+
+  .PhoneMenu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(1.25rem, 5vw, 2rem);
+  }
+
+  .PhoneMenu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .PhoneMenu a {
+    font-size: clamp(2rem, 10vw, 4rem);
+    font-family: var(--font-bebas), sans-serif;
+    text-decoration: none;
+    color: black;
+    transition: transform 0.2s;
+    overflow-wrap: anywhere;
+  }
+
+  .PhoneMenu a:hover {
+    transform: scale(1.1);
+  }
+
+  .Overlay {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    max-width: 100%;
+    min-height: 100svh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 35;
+  }
+  .CloseButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    color: black;
+    z-index: 41;
+    transition: transform 0.2s;
+  }
+
+  .CloseButton:hover {
+    transform: scale(1.2);
+  }
+}
+
+@media (max-width: 360px) {
+  .Navigation p a {
+    font-size: clamp(1.25rem, 7vw, 1.6rem);
+  }
+}

@@ -1,0 +1,12 @@
+.MainPage {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    background-color: black;
+}
+
+.MainPageAbout{
+    background-color: black;
+    z-index: 10;
+    position: relative;
+}

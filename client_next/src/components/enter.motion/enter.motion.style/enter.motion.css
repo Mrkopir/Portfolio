@@ -1,0 +1,48 @@
+.motionBackground{
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    min-height: 100svh;
+    background-color: #FF6404;
+    z-index: 999;
+}
+
+.Progress{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100svh;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.Progress label{
+    font-size: clamp(3.125rem, 4.5vw, 9.375rem);
+    font-family: var(--font-bebas), sans-serif;
+}
+
+.Progress progress {
+    appearance: none;
+    -webkit-appearance: none;
+    width: min(90%, 70rem);
+    height: clamp(1rem, 3svh, 3rem);
+    border-radius: 15px;
+    overflow: hidden;
+    color: black;
+    background-color: #FF6404;
+    border: 2px solid black;
+}
+
+.Progress progress::-webkit-progress-bar {
+    background-color: #FF6404;
+}
+
+.Progress progress::-webkit-progress-value {
+    background-color: black;
+}
+
+.Progress progress::-moz-progress-bar {
+    background-color: black;
+    border: none;
+}

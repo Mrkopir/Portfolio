@@ -1,0 +1,341 @@
+.WorksPage {
+    min-height: 100svh;
+    background: #FF6404 !important;
+    overflow-x: hidden;
+    padding: 20px;
+}
+
+.WorksPageMain {
+    display: grid;
+    grid-template-columns: minmax(min(100%, 28rem), 1fr) minmax(min(100%, 28rem), 1fr);
+    align-items: center;
+    gap: clamp(2rem, 4vw, 5rem);
+    width: min(100%, 2500px);
+    margin: 0 auto;
+    padding: clamp(2rem, 4vw, 5rem) 0 ;
+    overflow: hidden;
+}
+
+.WorksPageLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: clamp(1.5rem, 3vw, 3rem);
+    min-width: 0;
+}
+
+.WorksPageRight {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    width: 100%;
+}
+
+.WorksPageMainText h1 {
+    color: black;
+    font-family: var(--font-bebas), sans-serif;
+    text-align: center;
+    font-size: clamp(4.5rem, 8vw, 18.75rem);
+    line-height: 0.9;
+}
+
+.WorksPageMainText span {
+    color: white;
+}
+
+.WorksPageTable {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 100%;
+    min-height: clamp(24rem, 42vw, 43rem);
+}
+
+.WorksPageTableCategories {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    font-family: var(--font-bebas), sans-serif;
+    font-size: clamp(1.1rem, 1.7vw, 3.2rem);
+}
+
+.WorksPageTableCategories h3 {
+    display: flex;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    margin: 0;
+    padding: 0.35rem 0.65rem;
+    transition: scale 0.3s;
+    overflow-wrap: anywhere;
+}
+
+.active-category {
+    position: relative;
+    padding: 0;
+    background: #FF6404;
+    border: 2px solid #FF6404;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    width: fit-content;
+}
+
+.active-category h3 {
+    border: 3px solid #FF6404;
+    border-radius: 10px;
+    background: black;
+}
+
+.WorksPageTableCategories h3:hover:not(.active-category){
+    scale: 1.03;
+    margin: 0;
+}
+
+.WorkPageInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: clamp(1rem, 2vw, 2rem);
+    flex: 1;
+    min-height: clamp(20rem, 32vw, 34rem);
+}
+
+.WorkPageInfo h1 {
+    color: #FF6404;
+    font-size: clamp(2.5rem, 4vw, 9rem);
+    font-family: var(--font-bebas), sans-serif;
+    line-height: 1;
+    text-align: center;
+    min-height: 1em;
+    overflow-wrap: anywhere;
+}
+
+.WorkPageInfo p {
+    color: white;
+    font-size: clamp(0.9rem, 1.1vw, 2.2rem);
+    font-family: var(--font-open-sans), sans-serif;
+    line-height: 1.45;
+    text-align: center;
+    margin: 0 10px;
+    min-height: clamp(5rem, 8vw, 10rem);
+    overflow-wrap: anywhere;
+}
+
+.WorkPageInfoTechnologies{
+    color: #FF6404;
+    font-family: var(--font-bebas), sans-serif;
+    font-size: clamp(1.2rem, 1.7vw, 3.2rem);
+    text-align: center;
+    min-height: 1.25em;
+    overflow-wrap: anywhere;
+}
+
+.WorkPageInfoLink{
+    font-size: clamp(0.8rem, 1.2vw, 2.5rem);
+    font-family: var(--font-open-sans), sans-serif;
+    text-decoration: none;
+    color: #FF6404;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+.WorkPageInfoLinkWrap {
+    min-height: clamp(1.5rem, 2vw, 3rem);
+}
+
+.WorkPageInfoLinkSpacer {
+    min-height: clamp(1.5rem, 2vw, 3rem);
+}
+
+.WorkPageInfoButtons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: clamp(0.75rem, 2vw, 1.5rem);
+    width: 100%;
+    margin: clamp(1rem, 2vw, 1.5rem) 0 0;
+}
+
+.WorkPageInfoButtons button {
+    color: white;
+    font-size: clamp(1.5rem, 2.4vw, 5rem);
+    font-family: var(--font-bebas), sans-serif;
+    text-align: center;
+    background: #FF6404;
+    border: none;
+    border-radius: 15px;
+    min-width: clamp(8rem, 12vw, 16rem);
+    max-width: 100%;
+    padding: 0.25rem 1rem;
+    transition: scale 0.3s;
+}
+
+.WorkPageInfoButtons button:hover {
+    scale: 1.1;
+}
+
+.WorksPageBoard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(1rem, 2vw, 2rem);
+    background-color: black;
+    width: 100%;
+    min-height: clamp(24rem, 42vw, 46rem);
+    border-radius: 15px;
+    padding: clamp(1rem, 2vw, 2rem);
+}
+
+.WorksPageBoardImage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: clamp(12rem, 28vw, 32rem);
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #140803;
+    margin: 60px;
+}
+
+.WorksPageBoardImage img,
+.WorksPageBoardImg,
+.WorksPageImagePlaceholder {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+}
+
+.WorksPageBoardImg {
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+.WorksPageBoardImg.is-loaded {
+    opacity: 1;
+}
+
+.WorksPageImagePlaceholder {
+    position: absolute;
+    inset: 0;
+}
+
+.ContentPlaceholder,
+.Skeleton {
+    border-radius: 10px;
+    background: linear-gradient(90deg, #241008 0%, #3a1709 45%, #241008 90%);
+    background-size: 200% 100%;
+    animation: skeleton-pulse 1.4s ease-in-out infinite;
+}
+
+.WorkPageInfoTitlePlaceholder {
+    width: min(100%, 24rem);
+    height: clamp(3rem, 4vw, 7rem);
+    margin: 0 auto clamp(1rem, 2vw, 2rem);
+}
+
+.WorkPageInfoDescriptionPlaceholder {
+    display: grid;
+    gap: 0.75rem;
+    width: min(100%, 42rem);
+    min-height: clamp(5rem, 8vw, 10rem);
+    margin: 0 auto;
+}
+
+.WorkPageInfoDescriptionPlaceholder .ContentPlaceholder {
+    height: clamp(0.9rem, 1.1vw, 1.5rem);
+}
+
+.WorkPageInfoTechPlaceholder {
+    width: min(80%, 28rem);
+    height: clamp(1.5rem, 2vw, 3rem);
+    margin: clamp(1rem, 2vw, 1.5rem) auto;
+}
+
+.WorkPageInfoLinkPlaceholder {
+    width: min(80%, 24rem);
+    height: clamp(1rem, 1.5vw, 2rem);
+    margin: 0 auto;
+}
+
+.WorksPageBoardButtons {
+    display: flex;
+    justify-content: center;
+    gap: clamp(1rem, 4vw, 4rem);
+    width: 100%;
+}
+
+.WorksPageBoardButtons p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FF6404;
+    border: none;
+    border-radius: 15px;
+    width: clamp(5rem, 30%, 12rem);
+    min-width: 0;
+    min-height: clamp(2.5rem, 4vw, 6.25rem);
+    transition: scale 0.3s;
+    margin: 0;
+}
+
+@keyframes skeleton-pulse {
+    0% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+i {
+  border: solid white;
+  border-width: 0 clamp(0.25rem, 0.4vw, 0.65rem) clamp(0.25rem, 0.4vw, 0.65rem) 0;
+  display: inline-block;
+  padding: clamp(0.5rem, 0.8vw, 1.5rem);
+}
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+.WorksPageBoardButtons p:hover {
+    scale: 1.1;
+}
+
+@media (max-width: 1024px) {
+    .WorksPageMain {
+        grid-template-columns: 1fr;
+        align-items: stretch;
+    }
+}
+
+@media (max-width: 450px) {
+    .WorksPageMain {
+        padding-inline: clamp(0.85rem, 4vw, 1.25rem);
+    }
+
+    .WorksPageTableCategories h3 {
+        padding-inline: 0.35rem;
+    }
+
+    .WorksPageBoardButtons p {
+        width: clamp(4.5rem, 35%, 8rem);
+    }
+}

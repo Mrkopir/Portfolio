@@ -1,0 +1,102 @@
+.HeroSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(1.5rem, 4vw, 6rem);
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: #FF6404;
+    padding: 0 clamp(1.25rem, 5vw, 7rem);
+}
+
+.HeroSectionText{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    font-family: var(--font-bebas), sans-serif;
+    flex: 1 1 55%;
+    min-width: min(100%, 18rem);
+}
+
+.HeroSectionText h1{
+    font-size: clamp(4rem, 11vw, 18rem);
+    line-height: 0.9;
+}
+
+.HeroSectionText h2 {
+    font-size: clamp(3rem, 6.5vw, 10.5rem);
+    line-height: 0.95;
+    color: white;
+    margin: 0;
+}
+
+.HeroSectionText p {
+    font-size: clamp(1.5rem, 3vw, 5rem);
+    line-height: 1;
+    margin: 0;
+}
+
+.HeroSectionButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    border: none;
+    color: white;
+    min-width: clamp(9rem, 14vw, 22rem);
+    padding: clamp(0.45rem, 1vw, 1.1rem) clamp(1.4rem, 2.5vw, 3rem);
+    border-radius: 15px;
+    font-family: var(--font-bebas), sans-serif;
+    font-size: clamp(1.5rem, 2.4vw, 5rem);
+    line-height: 1;
+    margin-top: clamp(1rem, 2vw, 2rem);
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.HeroSectionButton:hover {
+    transform: scale(1.04);
+}
+
+.HeroSectionImage {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.HeroSectionImage img {
+    display: block;
+    width: clamp(18rem, 35vw, 68rem);
+    height: auto;
+}
+
+@media (max-width: 1024px) {
+    .HeroSection {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding-block: clamp(2rem, 8vw, 5rem);
+        min-height: calc(100svh - clamp(3.5rem, 5vw, 7rem));
+    }
+
+    .HeroSectionText {
+        align-items: center;
+        text-align: center;
+    }
+
+    .HeroSectionImage {
+        display: none;
+    }
+}
+
+@media (max-width: 420px) {
+    .HeroSectionText h1 {
+        font-size: clamp(3.6rem, 20vw, 5.4rem);
+    }
+
+    .HeroSectionText h2 {
+        font-size: clamp(2.5rem, 14vw, 4rem);
+    }
+}

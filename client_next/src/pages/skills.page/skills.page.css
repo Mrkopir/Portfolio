@@ -1,0 +1,188 @@
+.SkillsPage{
+    display: flex;
+    flex-direction: column;
+    min-height: 100svh;
+    font-family: var(--font-bebas), sans-serif;
+    background: #FF6404 !important;
+    overflow-x: hidden;
+}
+
+.SkillsPageMain{
+    display: grid;
+    grid-template-columns: minmax(min(100%, 28rem), 1fr) minmax(min(100%, 28rem), 1fr);
+    align-items: center;
+    gap: clamp(2rem, 4vw, 5rem);
+    width: min(100%, 1720px);
+    margin: 0 auto;
+    padding: clamp(2rem, 4vw, 5rem) clamp(1.25rem, 4vw, 5rem);
+    flex: 1;
+    overflow: hidden;
+}
+
+.SkillsPageMainRight {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    width: 100%;
+}
+
+.SkillsPageMainLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(1.5rem, 3vw, 3rem);
+    min-width: 0;
+    width: 100%;
+}
+
+.SkillsPageMainText h1 {
+    font-size: clamp(4.5rem, 9vw, 18.75rem);
+    line-height: 0.9;
+    text-align: center;
+    color: black;
+    overflow-wrap: anywhere;
+}
+
+.SkillsPageMainText span {
+    color: white;
+}
+
+.SkillsPageList {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+    width: 100%;
+    gap: clamp(0.75rem, 2vw, 2rem);
+}
+
+.SkillsPageListCarts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: clamp(9rem, 12vw, 15rem);
+    background-color: #000000;
+    padding: clamp(1rem, 2vw, 2rem);
+    border-radius: 15px;
+    cursor: pointer;
+    min-width: 0;
+}
+
+.SkillsPageListCartTitle h1 {
+    color: #FF6404;
+    text-align: center;
+    font-size: clamp(1.4rem, 2.2vw, 5rem);
+    line-height: 1;
+    overflow-wrap: anywhere;
+}
+
+.SkillsPageListCartDescription p{
+    font-size: clamp(0.8rem, 0.9vw, 1.9rem);
+    line-height: 1.4;
+    font-family: var(--font-open-sans), sans-serif;
+    color: white;
+    text-align: center;
+    margin: 0.75rem 0 0;
+    overflow-wrap: anywhere;
+}
+
+.SkillsPageBoard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    color: #FF6404;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 48rem;
+    min-height: clamp(21rem, 34vw, 38rem);
+    padding: clamp(1.25rem, 2.5vw, 3rem);
+    justify-content: center;
+    min-width: 0;
+}
+
+.SkillsPageBoard h1 {
+    font-size: clamp(3rem, 4.5vw, 9rem);
+    line-height: 1;
+    color: #FF6404;
+    text-align: center;
+    min-height: 1em;
+    overflow-wrap: anywhere;
+}
+
+.SkillsPageBoard p {
+    text-align: center;
+    color: white;
+    font-family: var(--font-open-sans), sans-serif;
+    font-size: clamp(0.9rem, 1vw, 1.9rem);
+    line-height: 1.45;
+    min-height: clamp(8rem, 10vw, 13rem);
+    overflow-wrap: anywhere;
+}
+
+.SkillsPageBoard h2,
+.SkillsPageBoard h3 {
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+.SkillsPageBoard h2,
+.SkillsPageBoard h3 {
+    min-height: 1.25em;
+}
+
+.SkillsPageBoardPlaceholder {
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    gap: clamp(1rem, 2vw, 1.5rem);
+    width: 100%;
+    min-height: clamp(16rem, 26vw, 30rem);
+}
+
+.SkillsPageBoardTitlePlaceholder {
+    width: min(100%, 22rem);
+    height: clamp(3rem, 4.5vw, 7rem);
+}
+
+.SkillsPageBoardTextPlaceholder {
+    display: grid;
+    gap: 0.75rem;
+    width: min(100%, 36rem);
+}
+
+.SkillsPageBoardTextPlaceholder .ContentPlaceholder {
+    height: clamp(0.9rem, 1.1vw, 1.5rem);
+}
+
+.SkillsPageBoardToolsPlaceholder {
+    width: min(80%, 28rem);
+    height: clamp(1.5rem, 2vw, 2.75rem);
+}
+
+.SkillsPageBoardLevelPlaceholder {
+    width: min(45%, 14rem);
+    height: clamp(1.5rem, 2vw, 2.75rem);
+}
+
+@media (max-width: 1024px) {
+    .SkillsPageMain {
+        grid-template-columns: 1fr;
+        align-items: stretch;
+    }
+
+    .SkillsPageMainRight {
+        width: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    .SkillsPageMain {
+        padding-inline: clamp(0.85rem, 4vw, 1.25rem);
+    }
+
+    .SkillsPageList {
+        grid-template-columns: 1fr;
+    }
+}

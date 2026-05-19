@@ -1,0 +1,48 @@
+@import "../pages/main.page/main.page.css";
+@import "../pages/main.page/hero.section/hero.section.css";
+@import "../pages/main.page/about.section/about.section.css";
+
+@import "../pages/skills.page/skills.page.css";
+@import "../pages/works.page/works.page.css";
+@import "../pages/contact.page/contact.page.css";
+
+@import "../components/nav/nav.css";
+@import "../components/enter.motion/enter.motion.style/enter.motion.css";
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+    background-color: black;
+    overflow-x: hidden;
+}
+
+html body {
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    overflow-x: hidden;
+    background-color: black;
+    min-height: 100%;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+body {
+    scrollbar-width: none;
+}
+
+h1{
+    margin: 0;
+}
+
+img,
+picture {
+    max-width: 100%;
+}
