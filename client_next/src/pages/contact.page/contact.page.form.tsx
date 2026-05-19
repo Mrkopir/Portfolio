@@ -29,7 +29,11 @@ export default function ContactPageForm ({status}: {status: unknown}) {
             status(true)
         }
         await new Promise(resolve => setTimeout(resolve, 2000))
-        await ContactSender(data)
+        await ContactSender({
+            name: data.name,
+            email: data.email,
+            message: `Phone: ${data.phone}\n\n${data.question}`,
+        })
         if(typeof status === "function"){
             status(false)
         }

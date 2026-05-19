@@ -2,6 +2,7 @@ import { useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 
 export default function WorksPageBoard ({getImgPath}: {getImgPath: string}) {
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:5000"
     const [imageState, setImageState] = useState({ path: getImgPath, index: 0 })
     const [loadedImageKey, setLoadedImageKey] = useState("")
     const imgIndex = imageState.path === getImgPath ? imageState.index : 0
@@ -38,7 +39,7 @@ export default function WorksPageBoard ({getImgPath}: {getImgPath: string}) {
                         {hasImage && (
                             <img
                                 className={imageLoaded ? "WorksPageBoardImg is-loaded" : "WorksPageBoardImg"}
-                                src={`https://partfolio-jeft.onrender.com/api/img/${getImgPath}_${imgIndex}.jpg`}
+                                src={`${apiUrl}/static/img/${getImgPath}_${imgIndex}.jpg`}
                                 alt="partfolio"
                                 onLoad={() => setLoadedImageKey(imageKey)}
                                 onError={(() => {
