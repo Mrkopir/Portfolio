@@ -70,7 +70,7 @@ export default function Navigation() {
         <div className={menuOpen ? "PhoneMenu menu-items active" : "PhoneMenu"}>
         <button className="CloseButton" onClick={handleCloseMenu}>×</button>
             <ul>
-                <li><a href="/client/public" onClick={handleCloseMenu}>Home</a></li>
+                <li><a href="/" onClick={handleCloseMenu}>Home</a></li>
                 <li><a href="/skills" onClick={handleCloseMenu}>My Skills</a></li>
                 <li><a href="/works" onClick={handleCloseMenu}>Works</a></li>
                 <li><a href="/contact" onClick={handleCloseMenu}>Contact</a></li>

@@ -45,7 +45,7 @@ export const projects: skills[] = [
     title: "Partfolio",
     shortname: "partfolio",
     category: "fullstack",
-    link: "https://partfolio-mauve.vercel.app/",
+    link: "https://portfolio-azure-iota-17.vercel.app/",
     description: "Персональний сайт-галерея проєктів розробника, де представлено найкращі роботи з описом, зображеннями та інтерактивною навігацією. Сайт створений для демонстрації технічних навичок, дизайну інтерфейсу та досвіду в розробці.",
     technologies: ["MongoDB", "Express", "React", "Node.js", "Farmer-Motion", "REST API"],
   },
