@@ -2,7 +2,7 @@ import { useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 
 export default function WorksPageBoard ({getImgPath}: {getImgPath: string}) {
-    const apiUrl = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:5000"
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL
     const [imageState, setImageState] = useState({ path: getImgPath, index: 0 })
     const [loadedImageKey, setLoadedImageKey] = useState("")
     const imgIndex = imageState.path === getImgPath ? imageState.index : 0
