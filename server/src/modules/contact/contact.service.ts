@@ -16,9 +16,17 @@ export class ContactService {
   async sendContactMessage(contactDto: ContactDto) {
     const botToken = this.configService.get<string>('TELEGRAM_BOT_TOKEN');
     const chatId = this.configService.get<string>('TELEGRAM_CHAT_ID');
-
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 7000);
     if (!botToken || !chatId) {
       throw new ServiceUnavailableException('Telegram delivery is not configured');
+    }
+
+    if (contactDto.hidden) {
+      return {
+        success: true,
+        message: 'Message sent',
+      };
     }
 
     const response = await fetch(
@@ -26,6 +34,7 @@ export class ContactService {
       {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
+        signal: controller.signal,
         body: JSON.stringify({
           chat_id: chatId,
           text: this.formatTelegramMessage(contactDto),
@@ -33,6 +42,8 @@ export class ContactService {
         }),
       },
     );
+    clearTimeout(timeout);
+
 
     if (!response.ok) {
       const body = await response.text();

@@ -59,6 +59,9 @@ export default function ContactPageForm ({status}: {status: unknown}) {
                     <label htmlFor = "question">Enter your question</label>
                     <input id = "question" name = "question" onChange={onHandleChange} />
                 </div>
+                <div id="hidden" >
+                    <input name = "hidden" onChange={onHandleChange} />
+                </div>
                 <div className="Button">
                     <button type="submit">Submit</button>
                 </div>

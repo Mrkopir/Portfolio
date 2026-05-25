@@ -132,6 +132,10 @@
     overflow-wrap: anywhere;
 }
 
+#hidden {
+    display: none;
+}
+
 .MessengerColumn a, .SocialColumn a {
     text-decoration: none;
 }

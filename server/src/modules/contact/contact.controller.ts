@@ -7,7 +7,7 @@ import { ContactDto } from './dto/contact.dto';
 export class ContactController {
   constructor(private readonly contactService: ContactService) {}
 
-  @Throttle({ default: { ttl: 60000, limit: 5 } })
+  @Throttle({ default: { ttl: 60000, limit: 3, blockDuration: 20000 } })
   @Post()
   sendContactMessage(@Body() contactDto: ContactDto) {
     return this.contactService.sendContactMessage(contactDto);
