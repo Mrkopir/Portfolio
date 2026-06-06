@@ -1,0 +1,23 @@
+services:
+  frontend:
+    build:
+      context: ./client_next
+      dockerfile: Dockerfile
+    container_name: Portfolio_front
+    restart: unless-stopped
+    environment:
+      NEXT_PUBLIC_API_URL: https://chetvertynivskyi.com
+    depends_on:
+      - backend
+    expose:
+      - "127.0.0.1:3000:3000"
+
+  backend:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    container_name: Portfolio_back
+    env_file: ./server/.env
+    restart: unless-stopped
+    expose:
+      - "127.0.0.1:5000:5000"
