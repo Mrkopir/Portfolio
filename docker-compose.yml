@@ -11,18 +11,28 @@ services:
       - backend
     ports:
       - "127.0.0.1:3000:3000"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "5"
 
   backend:
     build:
       context: ./server
       dockerfile: Dockerfile
     container_name: Portfolio_back
-    env_file: 
+    env_file:
       - ./server/.env
     restart: unless-stopped
     ports:
       - "127.0.0.1:5000:5000"
-  
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "5"
+
   nginx:
     image: nginx:alpine
     container_name: Portfolio_nginx
@@ -35,8 +45,15 @@ services:
       - "443:443"
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - /var/log/application_log/nginx:/var/log/nginx
       - ./nginx/certbot/www:/var/www/certbot
       - ./certbot/conf:/etc/letsencrypt
+      - ./nginx/main_conf_file.conf:/etc/nginx/nginx.conf
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "5"
 
   certbot:
     image: certbot/certbot
@@ -44,4 +61,3 @@ services:
     volumes:
       - ./nginx/certbot/www:/var/www/certbot
       - ./certbot/conf:/etc/letsencrypt
-
