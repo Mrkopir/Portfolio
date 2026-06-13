@@ -16,8 +16,6 @@ export class ContactService {
   async sendContactMessage(contactDto: ContactDto) {
     const botToken = this.configService.get<string>('TELEGRAM_BOT_TOKEN');
     const chatId = this.configService.get<string>('TELEGRAM_CHAT_ID');
-    const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 7000);
     if (!botToken || !chatId) {
       throw new ServiceUnavailableException('Telegram delivery is not configured');
     }
@@ -29,6 +27,8 @@ export class ContactService {
       };
     }
 
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 7000);
     const response = await fetch(
       `https://api.telegram.org/bot${botToken}/sendMessage`,
       {
@@ -43,7 +43,6 @@ export class ContactService {
       },
     );
     clearTimeout(timeout);
-
 
     if (!response.ok) {
       const body = await response.text();
